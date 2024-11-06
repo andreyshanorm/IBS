@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding-top: 16px;
+}
+.search-input__block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 11.5px;
+    padding-bottom: 4px;
+}
+
+.search-input__block::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    
+}
+
+.search-input__block:focus-within::before{
+    background-color: #E97F03;
+}
+
+.search-input {
+    font-family: inherit;
+    outline: none;
+    font-size: 14px;
+    border: none;
+}
+
+
+.search-icon.active path{
+    fill: #E97F03;
+}
+
+.search-input::placeholder {
+    color: inherit;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
+
+.icons div{
+    width: 20px;
+    height: 20px;
+}
+
+.product-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+.product-list__item {
+    cursor: pointer;
+    width: 220px;
+    height: 272px;
+    position: relative;
+}
+
+.product-list__item:hover{
+    border-radius: 10px;
+    background-color: #00000026;
+}
+
+.list__item-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.list__item-img {
+    padding-top: 50px;
+}
+.list__item-name {
+    color: #323232;
+    padding-top: 28px;
+    font-size: 18px;
+}
+.list__item-price {
+    color:#545454;
+    padding-bottom: 24px;
+}
+.list__item-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.icon.none{
+    display: none;
+}
+
+.orange-icon.none{
+    display: none;
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+
+    .product-list {
+        gap: 17px;
+    }
+
+    .product-list__item {
+        width: 155px;
+    }
+}
